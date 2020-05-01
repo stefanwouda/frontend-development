@@ -1,0 +1,336 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Section styling */
+
+body {
+    background-color: #201c29;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    color: white;
+    font-family: Rubik;
+}
+
+/* .icon-logo-star {
+    width: 34px;
+    height: 38px;
+    margin: 0 .5rem 0 0;
+    fill: #ff8a00;
+    -webkit-transition: 1.4s ease-out;
+    transition: 1.4s ease-out;
+    -webkit-transform: rotate(2turn);
+    transform: rotate(2turn);
+} */
+
+/* Logo */
+
+.logo {
+    max-width: 20%;
+    max-height: 20%;
+}
+
+/* Top header */
+
+.main-nav nav a {
+    float: rig;
+    display: ;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    position: static;
+}
+
+.site-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 0;
+    z-index: 1000;
+    background: #100e17;
+    border-bottom: 1px solid #201c29;
+}
+
+nav li {
+    padding: rem;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+/* Hero Article */
+
+.hero-article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 100px;
+    grid-gap: 2rem;
+    font-size: 20px;
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.hero-article h1 a {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-article p {
+    font-size: 16px;
+}
+
+.read-more {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+    font-weight: 700;
+    border-bottom: 1px solid #e52e71 !important;
+}
+
+/* Popular cards row */
+
+.popular-section {
+    background-image: linear-gradient(0deg, #ff8a00, #e52e71);
+    position: relative;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 0 4rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 0 320px;
+    transform: rotate(deg);
+}
+
+.popular-section h2 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/* .cards {
+    float: left;
+    display: inline;
+    width: 20%;
+    position: relative;
+    border: 1px solid #201c29;
+} */
+
+.cards h2 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.cards {
+    min-width: 300px;
+    min-height: 350px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    float: left;
+    width: 10%;
+    padding: 0 10px;
+}
+
+/* Big articles */
+
+.big-articles {
+    padding-bottom: 2rem;
+}
+
+.big-articles h2 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.big-articles p {
+    font-size: 16px;
+}
+
+.bigger-articles {
+    border: 1px solid #201c29;
+}
+
+.keep-browsing {
+    background-image: linear-gradient(0deg, #ff8a00, #e52e71);
+    position: relative;
+    border-radius: 16px;
+    padding: 0.5rem;
+    margin: 0 4rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.keep-browsing h2 {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .cards {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+
+    @media screen and (max-width: 600px) {
+        .bigger-articles {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
