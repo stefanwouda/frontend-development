@@ -17,181 +17,194 @@
         <nav class="main-nav">
             <ul class="main-nav">
                 <li><a href="index.html"><img class="logo" src="images/css-tricks-logo.png" alt="CSS-Tricks logo"></a></li>
-                <li><a href="flexbox.html"><img src="images/" alt="Articles"></a>Articles</li>
-                <li><a href="flexbox.html"></a>Videos</li>
-                <li><a href="flexbox.html"></a>Snippets</li>
+                <li class="articles"><a href="flexbox.html"><img src="images/icons/articles.png" width="30" height="30"></a>Articles</li>
+                <li class="videos"><a href="flexbox.html"></a>Videos</li>
+                <li class="almanac"><a href="flexbox.html"></a>Almanac</li>
+                <li class="newsletter"><a href="flexbox.html"></a>Newsletter</li>
+                <li class="books"><a href="flexbox.html"></a>Books</li>
+                <li class="guides"><a href="flexbox.html"></a>Guides</li>
             </ul>
         </nav>
     </header>
-    <!-- Hero Article -->
-    <header class="hero-article">
-        <h1><a href="flexbox.html">A Complete Guide to Flexbox</a></h1>
 
-        <address>
-            <div class="author-avatar"></div>
-            <div class="author-name">
-                <p>Author</p>
-                <p></p>
-            </div>
+    <main class="page-wrap">
+        <!-- Hero Article -->
+        <header class="hero-article">
+            <h1><a href="flexbox.html">A Complete Guide to Flexbox</a></h1>
 
-        </address>
-        <p> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart... <a href="flexbox.html" class="read-more"> Read article</a></p>
-    </header>
-
-
-    <!-- div/section maken -->
-    <header class="popular-section">
-        <h2 class="popular-title">Popular this month</h2>
-    </header>
-
-    <!-- Cards -->
-    <article class="cards">
-        <header>
-            <time datetime="2019-10-23"> Oct 23, 2019</time>
-            <h2>Why Are Accessible Websites so Hard to Build?</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Jim Doe</p>
-            </aside>
-        </header>
-    </article>
-
-    <article class="cards">
-        <header>
-            <time datetime="2019-11-01"> Nov 1, 2019</time>
-            <h2>Become a Front-End Master in 2020 With These 10 Project Ideas</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Jim Doe</p>
-            </aside>
-        </header>
-    </article>
-
-    <article class="cards">
-        <header>
-            <time datetime="2019-10-28"> Oct 28, 2019</time>
-            <h2>A Business Case for Dropping Internet Explorer</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Jim Doe</p>
-            </aside>
-        </header>
-    </article>
-
-    <article class="cards">
-        <header>
-            <time datetime="2019-11-04"> Nov 4, 2019</time>
-            <h2>The Trick to Animating the Dot on the Letter “i”</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Jim Doe</p>
-            </aside>
-        </header>
-    </article>
-
-    <!-- Bigger articles -->
-
-    <article>
-        <header class="big-articles">
-            <time datetime="2019-11-27"> November 27, 2019</time>
-            <h2>iOS 13 Broke the Classic Pure CSS Parallax Technique</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Chris Coyier</p>
-                <p>I know. You hate parallax. You know what we should hate more? When things that used to work on the web stop working without any clear warning or idea why.</p>
-
-                <p>Way back in 2014, Keith Clark blogged an exceptionally clever CSS trick where you essentially use a CSS transform to scale an element down affecting how it appears to scroll, then "depth correcting" it back to "normal" size. Looks like we got five years of fun out of that, but... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                <div class="tags">
-                    <p>iOS</p>
-                    <p>Standards</p>
+            <address>
+                <div class="author-avatar"></div>
+                <div class="author-name">
+                    <p>Author</p>
+                    <p></p>
                 </div>
-            </aside>
+
+            </address>
+            <p> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart... <a href="flexbox.html" class="read-more"> Read article</a></p>
         </header>
-    </article>
+
+
+        <!-- div/section maken -->
+        <section class="popular-articles">
+
+            <header class="popular-header-card">
+                <h2>Popular this month</h2>
+            </header>
+        </section>
+
+        <!-- Cards -->
+        <section class="cards-grid">
+
+            <article class="cards">
+                <header>
+                    <time datetime="2019-10-23"> Oct 23, 2019</time>
+                    <h2>Why Are Accessible Websites so Hard to Build?</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Jim Doe</p>
+                    </aside>
+                </header>
+            </article>
+
+            <article class="cards">
+                <header>
+                    <time datetime="2019-11-01"> Nov 1, 2019</time>
+                    <h2>Become a Front-End Master in 2020 With These 10 Project Ideas</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Jim Doe</p>
+                    </aside>
+                </header>
+            </article>
+
+            <article class="cards">
+                <header>
+                    <time datetime="2019-10-28"> Oct 28, 2019</time>
+                    <h2>A Business Case for Dropping Internet Explorer</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Jim Doe</p>
+                    </aside>
+                </header>
+            </article>
+
+            <article class="cards">
+                <header>
+                    <time datetime="2019-11-04"> Nov 4, 2019</time>
+                    <h2>The Trick to Animating the Dot on the Letter “i”</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Jim Doe</p>
+                    </aside>
+                </header>
+            </article>
+        </section>
+
+        <!-- Bigger articles -->
+        <section class="bigger-articles">
+
+            <article class="big-article">
+                <header>
+                    <time datetime="2019-11-27"> November 27, 2019</time> </header>
+                <h2>iOS 13 Broke the Classic Pure CSS Parallax Technique</h2>
+                <aside>
+                    <img href>
+                    <p>Author</p>
+                    <p>Chris Coyier</p>
+                    <p>I know. You hate parallax. You know what we should hate more? When things that used to work on the web stop working without any clear warning or idea why.</p>
+
+                    <p>Way back in 2014, Keith Clark blogged an exceptionally clever CSS trick where you essentially use a CSS transform to scale an element down affecting how it appears to scroll, then "depth correcting" it back to "normal" size. Looks like we got five years of fun out of that, but... <a href="flexbox.html" class="read-more"> Read article</a></p>
+                    <div class="tags">
+                        <p>iOS</p>
+                        <p>Standards</p>
+                    </div>
+                </aside>
+            </article>
 
 
 
-    <article>
-        <header class="big-articles">
-            <time datetime="2019-11-26"> November 26, 2019</time>
-            <h2>The Thought Process Behind a Flexbox Layout</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Chris Coyier</p>
-                <p>I just need to put two boxes side-by-side and I hear flexbox is good at stuff like that.</p>
-                <p>Just adding display: flex; to the parent element lays out the children in a row.</p>
-                <p>Well, that's cool. I guess I could have floated them, but this is easier.</p>
-                <p>They should probably take up the full space they have though. Can I just stretch the parent to 100% wide? Well, I can, but that's apparently not going to affect the child elements... <a href="flexbox.html" class="read-more"> Read article</a></p>
-            </aside>
-        </header>
-    </article>
+            <article class="big-article">
+                <header>
+                    <time datetime="2019-11-26"> November 26, 2019</time>
+                    <h2>The Thought Process Behind a Flexbox Layout</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Chris Coyier</p>
+                        <p>I just need to put two boxes side-by-side and I hear flexbox is good at stuff like that.</p>
+                        <p>Just adding display: flex; to the parent element lays out the children in a row.</p>
+                        <p>Well, that's cool. I guess I could have floated them, but this is easier.</p>
+                        <p>They should probably take up the full space they have though. Can I just stretch the parent to 100% wide? Well, I can, but that's apparently not going to affect the child elements... <a href="flexbox.html" class="read-more"> Read article</a></p>
+                    </aside>
+                </header>
+            </article>
 
 
-    <article>
-        <header class="big-articles">
-            <time datetime="2019-11-26"> November 16, 2019</time>
-            <h2>An Introduction to the Picture-in-Picture Web API</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Ayooluwa Isaiah</p>
-                <p>Picture-in-Picture made its first appearance on the web in the Safari browser with the release of macOS Sierra in 2016. It made it possible for a user to pop a video out into a small floating window that stays above all others, so that they can keep watching while doing other things. It’s an idea that came from TV, where, for example, you might want to keep watching your Popular Sporting Event even as you browse the guide or even... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                <div class="tags">
-                    <p>Video</p>
-                </div>
-            </aside>
-        </header>
-    </article>
+            <article class="big-article">
+                <header>
+                    <time datetime="2019-11-26"> November 16, 2019</time>
+                    <h2>An Introduction to the Picture-in-Picture Web API</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Ayooluwa Isaiah</p>
+                        <p>Picture-in-Picture made its first appearance on the web in the Safari browser with the release of macOS Sierra in 2016. It made it possible for a user to pop a video out into a small floating window that stays above all others, so that they can keep watching while doing other things. It’s an idea that came from TV, where, for example, you might want to keep watching your Popular Sporting Event even as you browse the guide or even... <a href="flexbox.html" class="read-more"> Read article</a></p>
+                        <div class="tags">
+                            <p>Video</p>
+                        </div>
+                    </aside>
+                </header>
+            </article>
 
 
-    <article>
-        <header class="big-articles">
-            <time datetime="2019-11-15"> November 15, 2019</time>
-            <h2>The Amazingly Useful Tools from Yoksel</h2>
-            <aside>
-                <img href>
-                <p>Author</p>
-                <p>Jim Doe</p>
-                <p>I find myself web searching for some tool by Yoksel at least every month. I figured I'd list out some of my favorites here in case you aren't aware of them... <a href="flexbox.html" class="read-more"> Read article</a></p>
-            </aside>
-        </header>
-    </article>
+            <article class="big-article">
+                <header>
+                    <time datetime="2019-11-15"> November 15, 2019</time>
+                    <h2>The Amazingly Useful Tools from Yoksel</h2>
+                    <aside>
+                        <img href>
+                        <p>Author</p>
+                        <p>Jim Doe</p>
+                        <p>I find myself web searching for some tool by Yoksel at least every month. I figured I'd list out some of my favorites here in case you aren't aware of them... <a href="flexbox.html" class="read-more"> Read article</a></p>
+                    </aside>
+                </header>
+            </article>
 
-    <header class="keep-browsing">
-        <h2 class="keep-browsing">Keep browsing in the archives</h2>
-    </header>
+            <header class="keep-browsing">
+                <h2 class="keep-browsing">Keep browsing in the archives</h2>
+            </header>
+        </section>
 
+        <!-- Footer -->
+        <footer>
+            <h2>How do you stay up to date in this fast-moving industry?</h2>
+            <p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas from around the web, and what we think about them.</p>
+            <input type="email" name="email" value="" size="20" maxlength="20" />
+            <input type="submit" value="Subscribe" name="Subscribe" />
+        </footer>
+        <footer>
+            <h4>👋</h4>
+            <p>CSS-Tricks* is created, written by, and maintained by Chris Coyier and a team of swell people. The tech stack for this site is fairly boring. That's a good thing! I've used WordPress since day one all the way up to v17, a decision I'm very happy with. I also leverage Jetpack for extra functionality and Local for local development.</p>
+            <p>*May or may not contain any actual "CSS" or "Tricks".</p>
 
-    <!-- Footer -->
-    <footer>
-        <h2>How do you stay up to date in this fast-moving industry?</h2>
-        <p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas from around the web, and what we think about them.</p>
-        <input type="email" name="email" value="" size="20" maxlength="20" />
-        <input type="submit" value="Subscribe" name="Subscribe" />
-    </footer>
-    <footer>
-        <h4>👋</h4>
-        <p>CSS-Tricks* is created, written by, and maintained by Chris Coyier and a team of swell people. The tech stack for this site is fairly boring. That's a good thing! I've used WordPress since day one all the way up to v17, a decision I'm very happy with. I also leverage Jetpack for extra functionality and Local for local development.</p>
-        <p>*May or may not contain any actual "CSS" or "Tricks".</p>
+            <nav>
+                <h4>Other Nav</h4>
+                <a href="contact.html">Contact</a>
+                <a href="about">About</a>
+                <a href="forums">Forums</a>
+                <a href="advertise">Advertise</a>
+                <a href="license">License</a>
+                <a href="subscribe">Subscribe</a>
+                <a href="guest-posting">Guest Posting</a>
+                <a href="authors">All Authors</a>
+            </nav>
+        </footer>
 
-        <nav>
-            <h4>Other Nav</h4>
-            <a href="contact.html">Contact</a>
-            <a href="about">About</a>
-            <a href="forums">Forums</a>
-            <a href="advertise">Advertise</a>
-            <a href="license">License</a>
-            <a href="subscribe">Subscribe</a>
-            <a href="guest-posting">Guest Posting</a>
-            <a href="authors">All Authors</a>
-        </nav>
-    </footer>
+    </main>
 
 </body>
 

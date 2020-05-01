@@ -108,7 +108,11 @@ section {
 }
 
 body {
-    line-height: 1;
+    line-height: 1, 7;
+}
+
+.page-wrap {
+    padding: 2rem;
 }
 
 ol,
@@ -154,19 +158,8 @@ html {
 
 html {
     color: white;
-    font-family: Rubik;
+    font-family: "Rubik";
 }
-
-/* .icon-logo-star {
-    width: 34px;
-    height: 38px;
-    margin: 0 .5rem 0 0;
-    fill: #ff8a00;
-    -webkit-transition: 1.4s ease-out;
-    transition: 1.4s ease-out;
-    -webkit-transform: rotate(2turn);
-    transform: rotate(2turn);
-} */
 
 /* Logo */
 
@@ -177,9 +170,14 @@ html {
 
 /* Top header */
 
-.main-nav nav a {
-    float: rig;
-    display: ;
+.site-header .main-nav > ul > li > a {
+    padding: 1rem .5rem;
+    margin-left: 2rem;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2rem;
 }
 
 nav > ul {
@@ -199,25 +197,14 @@ nav > ul {
     border-bottom: 1px solid #201c29;
 }
 
-nav li {
-    padding: rem;
-}
-
-nav ul li {
-    margin-left: 2rem;
-}
-
 /* Hero Article */
 
 .hero-article {
     position: relative;
     display: grid;
-    grid-template-columns: 2fr 100px;
-    grid-gap: 2rem;
     font-size: 20px;
     margin-bottom: 4rem;
     padding-top: 2rem;
-    overflow: hidden;
 }
 
 .hero-article h1 a {
@@ -237,8 +224,9 @@ nav ul li {
 }
 
 /* Popular cards row */
+.popular-articles {}
 
-.popular-section {
+.popular-header-card {
     background-image: linear-gradient(0deg, #ff8a00, #e52e71);
     position: relative;
     border-radius: 16px;
@@ -248,13 +236,45 @@ nav ul li {
     justify-content: flex-end;
     flex-direction: column;
     flex: 0 0 320px;
-    transform: rotate(deg);
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
 }
 
-.popular-section h2 {
-    font-size: 25px;
+.popular-header-card p {
+    margin: 0;
+    font-size: .8rem
+}
+
+.popular-header-card h2 {
+    font-size: 1.6rem;
     font-weight: 700;
 }
+
+.cards-grid {
+    padding: 3rem;
+    display: flex;
+    margin-left: 1rem;
+}
+
+.cards-grid .card {
+    flex: 1;
+    transition: all 0.3s ease-in-out;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cards-grid .card: hover,
+.cards-grid .card: focus {
+    transform: translateY(-1rem);
+    outline: none;
+}
+
+.cards-grid .card: hover ~ .cards,
+.cards-grid .card: focus ~ .cards {
+    transform: translateX(11rem);
+}
+
 
 /* .cards {
     float: left;
@@ -269,7 +289,13 @@ nav ul li {
     font-weight: 700;
 }
 
+.cards aside {
+    font-size: 14px;
+    margin: 0 0 1rem;
+}
+
 .cards {
+    position: relative;
     min-width: 300px;
     min-height: 350px;
     padding: 1.5rem;
@@ -285,52 +311,51 @@ nav ul li {
     padding: 0 10px;
 }
 
-/* Big articles */
-
-.big-articles {
-    padding-bottom: 2rem;
-}
-
-.big-articles h2 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.big-articles p {
-    font-size: 16px;
-}
-
-.bigger-articles {
-    border: 1px solid #201c29;
-}
-
-.keep-browsing {
-    background-image: linear-gradient(0deg, #ff8a00, #e52e71);
-    position: relative;
-    border-radius: 16px;
-    padding: 0.5rem;
-    margin: 0 4rem 0 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.keep-browsing h2 {
-    font-size: 25px;
-    font-weight: 700;
-    text-align: center;
-}
-
-@media screen and (max-width: 600px) {
+@media(max-width:1200px) {
     .cards {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
+        min-width: 220px
     }
 
+    /* Big articles */
+
+    .big-articles {
+        padding-bottom: 2rem;
+    }
+
+    .big-article header {}
+
+    .big-article h2 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    .big-article p {
+        font-size: 16px;
+    }
+
+    .bigger-articles {
+        border: 1px solid #201c29;
+    }
 
     @media screen and (max-width: 600px) {
         .bigger-articles {
             width: 100%;
             display: block;
             margin-bottom: 20px;
+        }
+
+        .keep-browsing {
+            background-image: linear-gradient(0deg, #ff8a00, #e52e71);
+            position: relative;
+            border-radius: 16px;
+            padding: 0.5rem;
+            margin: 0 4rem 0 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .keep-browsing h2 {
+            font-size: 25px;
+            font-weight: 700;
+            text-align: center;
         }
