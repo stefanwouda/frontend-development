@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>A First Look at `aspect-ratio`</title>
+    <link href="static/css/main.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <header class="site-header">
+
+        <nav class="main-nav">
+            <ul class="main-nav">
+                <li><a href="index.html"><img class="logo" src="images/css-tricks-logo.png" alt="CSS-Tricks logo"></a></li>
+                <li class="articles"><a href="main-article.html"></a>Articles</li>
+                <li class="videos"><a href="main-article.html"></a>Videos</li>
+                <li class="almanac"><a href="main-article.html"></a>Almanac</li>
+                <li class="newsletter"><a href="main-article.html"></a>Newsletter</li>
+                <li class="books"><a href="main-article.html"></a>Books</li>
+                <li class="guides"><a href="main-article.html"></a>Guides</li>
+            </ul>
+        </nav>
+    </header>
+
+    <header class="header-of-article">
+        <div class="header-inside">
+            <div class="header-content">
+                <h1 class="article-content">A First Look at `aspect-ratio`</h1>
+                <div class="article-meta-info">
+                    <figcaption class="avatar">
+                        <img class="avatar" src="images/" alt="Avatar">
+                    </figcaption>
+                    <figcaption class="author-name">
+                        <p>Author: Chris Coyier</p>
+                    </figcaption>
+                    <figcaption class="date">
+                        <p>Date: June 1, 2020</p>
+                    </figcaption>
+                    <figcaption class="comments">
+                        <p>1 comment</p>
+                    </figcaption>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main-article-content">
+
+        <div class="dark-mode-button">
+            <h2 class="active-mode-message"></h2>
+            <button class='light-mode'>Light Mode</button>
+            <button class='dark-mode'>Dark Mode</button>
+        </div>
+
+        <article class="article-content">
+            <p class="text">Oh hey! A brand new property that affects how a box is sized! That’s a big deal. There are lots of ways already to make an aspect-ratio sized box (and I’d say this custom properties based solution is the best), but none of them are particularly intuitive and certainly not as straightforward as declaring a single property.</p>
+
+            <p>So, with the impending arrival of <code>aspect-ratio</code> (MDN, and not to be confused with the media query version), I thought I’d take a look at how it works and try to wrap my mind around it.</p>
+
+            <p>Shout out to Una where I first saw this and boy howdy did it strike interest in folks. Here’s me playing around a little.</p>
+
+            <h3>Just dropping aspect-ratio on an element alone will calculate a height based on the auto width.</h3>
+
+            <p>Without setting a width, an element will still have a natural auto width. So the height can be calculated from the aspect ratio and the rendered width.</p>
+
+            <pre rel="CSS" class="wp-block-csstricks-code-block language-css" data-line=""><code markup="tt">.el {
+  aspect-ratio: 16 / 9;
+}</code></pre>
+
+            <figure class="article-image"><img src="images/article-image-1.png" alt="Image 1"></figure>
+
+            <h3>If the content breaks out of the aspect ratio, the element will still expand.</h3>
+
+
+            <p>The aspect ratio becomes ignored in that situation, which is actually nice. That’s why the pseudo-element tactic for aspect ratios was popular, because it didn’t put us in dangerous data loss or awkward overlap territory when content got too much.</p>
+
+            <p>But if you want to constrain the height to the aspect ratio, you can by adding a <code>min-height: 0;:</code></p>
+
+            <figure class="article-image"><img src="images/article-image-2.png" alt="Image 2"></figure>
+
+            <h3>If the element has either a height or width, the other is calculated from the aspect ratio.</h3>
+
+            <p>So aspect-ratio is basically a way of setting the other direction when you only have one.</p>
+
+            <figure class="article-image"><img src="images/article-image-3.png" alt="Image 3"></figure>
+
+            <h3>If the element has both a height and width, aspect-ratio is ignored.</h3>
+
+            <p>The combination of an explicit height and width is “stronger” than the aspect ratio.</p>
+
+            <figure class="article-image"><img src="images/article-image-4.png" alt="Image 4"></figure>
+
+            <h3>Factoring in min-* and max-*</h3>
+
+            <p>There is always a little tension between width, min-width, and max-width (or the height versions). One of them always “wins.” It’s generally pretty intuitive.</p>
+
+            <p>If you set <code>width: 100px;</code> and <code>min-width: 200px;</code> then <code>min-width</code> will win. So, min-width is either ignored because you’re already over it, or wins. Same deal with max-width: if you set width: 100px; and max-width: 50px; then max-width will win. So, max-width is either ignored because you’re already under it, or wins.</p>
+
+            <p>It looks like that general intuitiveness carries on here: the min-* and max-* properties will either win or are irrelevant. And if they win, they break the aspect-ratio.</p>
+
+            <pre rel="CSS" class="wp-block-csstricks-code-block language-css" data-line=""><code markup="tt">.el {
+  aspect-ratio: 1 / 4;
+  height: 500px;
+
+  /* Ignored, because width is calculated to be 125px */
+  /* min-width: 100px; */
+
+  /* Wins, making the aspect ratio 1 / 2 */
+  /* min-width: 250px; */
+}
+</code></pre>
+
+            <h3>With value functions</h3>
+
+            <p>Aspect ratios are always most useful in fluid situations, or anytime you essentially don’t know one of the dimensions ahead of time. But even when you don’t know, you’re often putting constraints on things. Say 50% wide is cool, but you only want it to shrink as far as 200px. You might do width: max(50%, 200px);. Or constrain on both sides with clamp(200px, 50%, 400px);.</p>
+
+            <p>This seems to work intuitively:</p>
+
+            <pre rel="CSS" class="wp-block-csstricks-code-block language-css" data-line=""><code markup="tt">.el {
+  aspect-ratio: 4 / 3;
+  width: clamp(200px, 50%, 400px);
+}</code></pre>
+
+            <p>But say you run into that minimum 200px, and then apply a <code>min-width</code> of 300px? The <code>min-width</code> wins. It's still intuitive, but it gets brain-bending because of how many properties, functions, and values can be involved. </p>
+
+            <h3>Maybe it's helpful to think of aspect-ratio as the way to size an element?</h3>
+            <p>It will never beat any other sizing information out, but it will always do its sizing if there is no other information available for that dimension.</p>
+
+        </article>
+
+    </main>
+
+
+    <footer>
+        <nav class="footer-nav">
+            <h4>Other Nav</h4>
+            <a href="main-article.html">Contact</a>
+            <a href="main-article.html">About</a>
+            <a href="main-article.html">Forums</a>
+            <a href="main-article.html">Advertise</a>
+            <a href="main-article.html">License</a>
+            <a href="main-article.html">Subscribe</a>
+            <a href="main-article.html">Guest Posting</a>
+            <a href="main-article.html">All Authors</a>
+        </nav>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+
+</body>
+
+</html>

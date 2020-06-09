@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>CSS-Tricks</title>
     <link href="static/css/main.css" rel="stylesheet">
-    <link href="static/webfonts/fonts.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
@@ -17,12 +16,12 @@
         <nav class="main-nav">
             <ul class="main-nav">
                 <li><a href="index.html"><img class="logo" src="images/css-tricks-logo.png" alt="CSS-Tricks logo"></a></li>
-                <li class="articles"><a href="flexbox.html"><img src="images/icons/articles.png" width="30" height="30"></a>Articles</li>
-                <li class="videos"><a href="flexbox.html"></a>Videos</li>
-                <li class="almanac"><a href="flexbox.html"></a>Almanac</li>
-                <li class="newsletter"><a href="flexbox.html"></a>Newsletter</li>
-                <li class="books"><a href="flexbox.html"></a>Books</li>
-                <li class="guides"><a href="flexbox.html"></a>Guides</li>
+                <li class="articles"><a href="main-article.html"></a>Articles</li>
+                <li class="videos"><a href="main-article.html"></a>Videos</li>
+                <li class="almanac"><a href="main-article.html"></a>Almanac</li>
+                <li class="newsletter"><a href="main-article.html"></a>Newsletter</li>
+                <li class="books"><a href="main-article.html"></a>Books</li>
+                <li class="guides"><a href="main-article.html"></a>Guides</li>
             </ul>
         </nav>
     </header>
@@ -30,147 +29,220 @@
     <main class="page-wrap">
         <!-- Hero Article -->
         <header class="hero-article">
-            <h1><a href="flexbox.html">A Complete Guide to Flexbox</a></h1>
+            <h1><a href="main-article.html">A First Look at `aspect-ratio`</a></h1>
 
-            <address>
-                <div class="author-avatar"></div>
-                <div class="author-name">
-                    <p>Author</p>
-                    <p></p>
-                </div>
+            <div class="article-meta-info">
+                <figcaption class="avatar">
+                    <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                </figcaption>
+                <figcaption class="author-name">
+                    <p>Author: Chris Coyier</p>
+                </figcaption>
+                <figcaption class="date">
+                    <p>Date: June 1, 2020</p>
+                </figcaption>
+                <figcaption class="comments">
+                    <p>1 comment</p>
+                </figcaption>
+            </div>
+            <p> Oh hey! A brand new property that affects how a box is sized! That’s a big deal. There are lots of ways already to make an aspect-ratio sized box (and I’d say this custom properties based solution is the best), but none of them are particularly intuitive and certainly not as straightforward as declaring a single property.
 
-            </address>
-            <p> Our comprehensive guide to CSS flexbox layout. This complete guide explains everything about flexbox, focusing on all the different possible properties for the parent element (the flex container) and the child elements (the flex items). It also includes history, demos, patterns, and a browser support chart... <a href="flexbox.html" class="read-more"> Read article</a></p>
+                So, with the impending arrival of aspect-ratio (MDN, and not to be confused with the media query version), I thought … <a href="main-article.html" class="read-more"> Read article</a></p>
         </header>
 
 
         <!-- div/section maken -->
-        <section class="popular-articles">
 
-            <header class="popular-header-card">
-                <h2>Popular this month</h2>
-            </header>
-        </section>
+        <div class="container">
+            <section class="popular-articles">
 
-        <!-- Cards -->
-        <section class="cards-grid">
-
-            <article class="cards">
-                <header>
-                    <time datetime="2019-10-23"> Oct 23, 2019</time>
-                    <h2>Why Are Accessible Websites so Hard to Build?</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Jim Doe</p>
-                    </aside>
+                <header class="popular-header-card">
+                    <h2>Popular this month</h2>
                 </header>
-            </article>
+            </section>
 
-            <article class="cards">
-                <header>
-                    <time datetime="2019-11-01"> Nov 1, 2019</time>
-                    <h2>Become a Front-End Master in 2020 With These 10 Project Ideas</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Jim Doe</p>
-                    </aside>
-                </header>
-            </article>
+            <!-- Cards -->
+            <section class="cards-grid">
 
-            <article class="cards">
-                <header>
-                    <time datetime="2019-10-28"> Oct 28, 2019</time>
-                    <h2>A Business Case for Dropping Internet Explorer</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Jim Doe</p>
-                    </aside>
-                </header>
-            </article>
+                <article class="cards">
+                    <header>
+                        <time datetime="2019-10-23"> Oct 23, 2019</time>
+                        <h2>Why Are Accessible Websites so Hard to Build?</h2>
+                        <div class="article-meta-info">
+                            <figcaption class="avatar">
+                                <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                            </figcaption>
+                            <figcaption class="author-name">
+                                <p>Author: Chris Coyier</p>
+                            </figcaption>
+                            <figcaption class="date">
+                                <p>Date: June 1, 2020</p>
+                            </figcaption>
+                            <figcaption class="comments">
+                                <p>1 comment</p>
+                            </figcaption>
+                        </div>
+                    </header>
+                </article>
 
-            <article class="cards">
-                <header>
-                    <time datetime="2019-11-04"> Nov 4, 2019</time>
-                    <h2>The Trick to Animating the Dot on the Letter “i”</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Jim Doe</p>
-                    </aside>
-                </header>
-            </article>
-        </section>
+                <article class="cards">
+                    <header>
+                        <time datetime="2019-11-01"> Nov 1, 2019</time>
+                        <h2>Become a Front-End Master in 2020 With These 10 Project Ideas</h2>
+                        <div class="article-meta-info">
+                            <figcaption class="avatar">
+                                <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                            </figcaption>
+                            <figcaption class="author-name">
+                                <p>Author: Chris Coyier</p>
+                            </figcaption>
+                            <figcaption class="date">
+                                <p>Date: June 1, 2020</p>
+                            </figcaption>
+                            <figcaption class="comments">
+                                <p>1 comment</p>
+                            </figcaption>
+                        </div>
+                    </header>
+                </article>
+
+                <article class="cards">
+                    <header>
+                        <time datetime="2019-10-28"> Oct 28, 2019</time>
+                        <h2>A Business Case for Dropping Internet Explorer</h2>
+                        <div class="article-meta-info">
+                            <figcaption class="avatar">
+                                <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                            </figcaption>
+                            <figcaption class="author-name">
+                                <p>Author: Chris Coyier</p>
+                            </figcaption>
+                            <figcaption class="date">
+                                <p>Date: June 1, 2020</p>
+                            </figcaption>
+                            <figcaption class="comments">
+                                <p>1 comment</p>
+                            </figcaption>
+                        </div>
+                    </header>
+                </article>
+
+                <article class="cards">
+                    <header>
+                        <time datetime="2019-11-04"> Nov 4, 2019</time>
+                        <h2>The Trick to Animating the Dot on the Letter “i”</h2>
+                        <div class="article-meta-info">
+                            <figcaption class="avatar">
+                                <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                            </figcaption>
+                            <figcaption class="author-name">
+                                <p>Author: Chris Coyier</p>
+                            </figcaption>
+                            <figcaption class="date">
+                                <p>Date: June 1, 2020</p>
+                            </figcaption>
+                            <figcaption class="comments">
+                                <p>1 comment</p>
+                            </figcaption>
+                        </div>
+                    </header>
+                </article>
+            </section>
+        </div>
 
         <!-- Bigger articles -->
         <section class="bigger-articles">
 
             <article class="big-article">
                 <header>
-                    <time datetime="2019-11-27"> November 27, 2019</time> </header>
-                <h2>iOS 13 Broke the Classic Pure CSS Parallax Technique</h2>
-                <aside>
-                    <img href>
-                    <p>Author</p>
-                    <p>Chris Coyier</p>
-                    <p>I know. You hate parallax. You know what we should hate more? When things that used to work on the web stop working without any clear warning or idea why.</p>
+                    <h2>iOS 13 Broke the Classic Pure CSS Parallax Technique</h2>
+                </header>
+                <div class="article-meta-info">
+                    <figcaption class="avatar">
+                        <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                    </figcaption>
+                    <figcaption class="author-name">
+                        <p>Author: Chris Coyier</p>
+                    </figcaption>
+                    <figcaption class="date">
+                        <p>Date: November 27, 2020</p>
+                    </figcaption>
+                    <figcaption class="comments">
+                        <p>1 comment</p>
+                    </figcaption>
+                </div>
+                <p>I know. You hate parallax. You know what we should hate more? When things that used to work on the web stop working without any clear warning or idea why.</p>
 
-                    <p>Way back in 2014, Keith Clark blogged an exceptionally clever CSS trick where you essentially use a CSS transform to scale an element down affecting how it appears to scroll, then "depth correcting" it back to "normal" size. Looks like we got five years of fun out of that, but... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                    <div class="tags">
-                        <p>iOS</p>
-                        <p>Standards</p>
-                    </div>
-                </aside>
+                <p>Way back in 2014, Keith Clark blogged an exceptionally clever CSS trick where you essentially use a CSS transform to scale an element down affecting how it appears to scroll, then "depth correcting" it back to "normal" size. Looks like we got five years of fun out of that, but... <a href="main-article.html" class="read-more"> Read article</a></p>
             </article>
 
 
 
             <article class="big-article">
                 <header>
-                    <time datetime="2019-11-26"> November 26, 2019</time>
                     <h2>The Thought Process Behind a Flexbox Layout</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Chris Coyier</p>
-                        <p>I just need to put two boxes side-by-side and I hear flexbox is good at stuff like that.</p>
-                        <p>Just adding display: flex; to the parent element lays out the children in a row.</p>
-                        <p>Well, that's cool. I guess I could have floated them, but this is easier.</p>
-                        <p>They should probably take up the full space they have though. Can I just stretch the parent to 100% wide? Well, I can, but that's apparently not going to affect the child elements... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                    </aside>
+                    <div class="article-meta-info">
+                        <figcaption class="avatar">
+                            <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                        </figcaption>
+                        <figcaption class="author-name">
+                            <p>Author: Chris Coyier</p>
+                        </figcaption>
+                        <figcaption class="date">
+                            <p>Date: November 26, 2019</p>
+                        </figcaption>
+                        <figcaption class="comments">
+                            <p>1 comment</p>
+                        </figcaption>
+                    </div>
+                    <p>I just need to put two boxes side-by-side and I hear flexbox is good at stuff like that.</p>
+                    <p>Just adding display: flex; to the parent element lays out the children in a row.</p>
+                    <p>Well, that's cool. I guess I could have floated them, but this is easier.</p>
+                    <p>They should probably take up the full space they have though. Can I just stretch the parent to 100% wide? Well, I can, but that's apparently not going to affect the child elements... <a href="main-article.html" class="read-more"> Read article</a></p>
                 </header>
             </article>
 
 
             <article class="big-article">
                 <header>
-                    <time datetime="2019-11-26"> November 16, 2019</time>
                     <h2>An Introduction to the Picture-in-Picture Web API</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Ayooluwa Isaiah</p>
-                        <p>Picture-in-Picture made its first appearance on the web in the Safari browser with the release of macOS Sierra in 2016. It made it possible for a user to pop a video out into a small floating window that stays above all others, so that they can keep watching while doing other things. It’s an idea that came from TV, where, for example, you might want to keep watching your Popular Sporting Event even as you browse the guide or even... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                        <div class="tags">
-                            <p>Video</p>
-                        </div>
-                    </aside>
+                    <div class="article-meta-info">
+                        <figcaption class="avatar">
+                            <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                        </figcaption>
+                        <figcaption class="author-name">
+                            <p>Author: Ayooluwa Isaiah</p>
+                        </figcaption>
+                        <figcaption class="date">
+                            <p>Date: November 16, 2019</p>
+                        </figcaption>
+                        <figcaption class="comments">
+                            <p>1 comment</p>
+                        </figcaption>
+                    </div>
+                    <p>Picture-in-Picture made its first appearance on the web in the Safari browser with the release of macOS Sierra in 2016. It made it possible for a user to pop a video out into a small floating window that stays above all others, so that they can keep watching while doing other things. It’s an idea that came from TV, where, for example, you might want to keep watching your Popular Sporting Event even as you browse the guide or even... <a href="main-article.html" class="read-more"> Read article</a></p>
                 </header>
             </article>
 
 
             <article class="big-article">
                 <header>
-                    <time datetime="2019-11-15"> November 15, 2019</time>
                     <h2>The Amazingly Useful Tools from Yoksel</h2>
-                    <aside>
-                        <img href>
-                        <p>Author</p>
-                        <p>Jim Doe</p>
-                        <p>I find myself web searching for some tool by Yoksel at least every month. I figured I'd list out some of my favorites here in case you aren't aware of them... <a href="flexbox.html" class="read-more"> Read article</a></p>
-                    </aside>
+                    <div class="article-meta-info">
+                        <figcaption class="avatar">
+                            <figure><img class="avatar" src="images/" alt="Avatar"></figure>
+                        </figcaption>
+                        <figcaption class="author-name">
+                            <p>Author: Jim Doe</p>
+                        </figcaption>
+                        <figcaption class="date">
+                            <p>Date: November 15, 2019</p>
+                        </figcaption>
+                        <figcaption class="comments">
+                            <p>1 comment</p>
+                        </figcaption>
+                    </div>
+                    <p>I find myself web searching for some tool by Yoksel at least every month. I figured I'd list out some of my favorites here in case you aren't aware of them... <a href="main-article.html" class="read-more"> Read article</a></p>
                 </header>
             </article>
 
@@ -183,24 +255,28 @@
         <footer>
             <h2>How do you stay up to date in this fast-moving industry?</h2>
             <p>A good start is to sign up for our weekly hand-written newsletter. We bring you the best articles and ideas from around the web, and what we think about them.</p>
-            <input type="email" name="email" value="" size="20" maxlength="20" />
-            <input type="submit" value="Subscribe" name="Subscribe" />
-        </footer>
-        <footer>
-            <h4>👋</h4>
+            <section id="form-wrap">
+                <form>
+                    <fieldset>
+                        <label for="newsletter-email" class="email-input"></label>
+                        <input type="email" name="email" class="email-input" id="newsletter-email" placeholder="lovetricks@internet.cool" size="20" maxlength="20" />
+                        <input type="submit" value="Subscribe" name="Subscribe" class="button" id="subscribe-button" />
+                    </fieldset>
+                </form>
+            </section>
             <p>CSS-Tricks* is created, written by, and maintained by Chris Coyier and a team of swell people. The tech stack for this site is fairly boring. That's a good thing! I've used WordPress since day one all the way up to v17, a decision I'm very happy with. I also leverage Jetpack for extra functionality and Local for local development.</p>
-            <p>*May or may not contain any actual "CSS" or "Tricks".</p>
+            <p class="small-text">*May or may not contain any actual "CSS" or "Tricks".</p>
 
-            <nav>
+            <nav class="footer-nav">
                 <h4>Other Nav</h4>
-                <a href="contact.html">Contact</a>
-                <a href="about">About</a>
-                <a href="forums">Forums</a>
-                <a href="advertise">Advertise</a>
-                <a href="license">License</a>
-                <a href="subscribe">Subscribe</a>
-                <a href="guest-posting">Guest Posting</a>
-                <a href="authors">All Authors</a>
+                <a href="main-article.html">Contact</a>
+                <a href="main-article.html">About</a>
+                <a href="main-article.html">Forums</a>
+                <a href="main-article.html">Advertise</a>
+                <a href="main-article.html">License</a>
+                <a href="main-article.html">Subscribe</a>
+                <a href="main-article.html">Guest Posting</a>
+                <a href="main-article.html">All Authors</a>
             </nav>
         </footer>
 
