@@ -260,7 +260,7 @@ strong {
 /* Header styling */
 
 h2 a {
-    font-family: Open Sans Bold, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 32px;
     color: white;
 }
@@ -272,6 +272,7 @@ h2 a:hover {
     -webkit-box-decoration-break: clone;
 }
 
+/* Article Content on Homepage */
 
 .article-text p {
     color: #c2c2c2;
@@ -389,8 +390,8 @@ h2 a:hover {
     }
 }
 
-.popular-header-card h2 {
-    font-family: Open Sans Bold, sans-serif;
+.header-card-title {
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     color: white;
 }
