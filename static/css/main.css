@@ -164,6 +164,7 @@ html {
 
 html {
     font-family: Domine, sans-serif;
+    font-weight: 400;
     color: white;
     line-height: 1.7;
 }
@@ -234,7 +235,7 @@ nav > ul {
 }
 
 strong {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .date {
@@ -320,7 +321,7 @@ h2 a:hover {
 }
 
 .hero-article {
-    font-family: Domine, sans-serif;
+    font-family: 'Domine', serif;
 }
 
 .article-date {
