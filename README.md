@@ -3,6 +3,9 @@ Opdracht voor het vak Frontend @CMD Amsterdam
 
 Voor de herkansing van Frontend ga ik overnieuw beginnen. Mijn keuze is om aan de slag te gaan met de site https://css-tricks.com/. Ik ben geinteresseerd in de vormgeving en de artikelen die op deze site gepubliceerd worden.
 
+Github repository: https://github.com/stefanwouda/frontend-development
+Github site: https://stefanwouda.github.io/frontend-development/
+
 ## Criteria
 ### 1.) De HTML is gestructureerd en semantisch opgemaakt
 
